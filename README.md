@@ -1,6 +1,6 @@
 # CNN Model for A Sentiment Classification Task
 
-
+***model_training***
 
 ***glue-job***
 * `glue_job_script.py`: script for Glue ETL job

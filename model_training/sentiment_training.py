@@ -30,7 +30,7 @@ def main(args):
 
     model = sentiment_model_cnn.keras_model_fn(None, training_config)
     print("Starting training...")
-
+    model.summary()
     model.fit(
         x=train_dataset[0]['embedding_input'], y=train_dataset[1], steps_per_epoch=train_dataset[2]["num_batches"],
         epochs=training_config["num_epoch"],

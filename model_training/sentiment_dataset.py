@@ -85,6 +85,5 @@ def _input_fn(directory, config, mode):
 
     iterator = tf.compat.v1.data.make_one_shot_iterator(dataset)
     dataset_features, dataset_labels = iterator.get_next()
-
     return [{config["input_tensor_name"]: dataset_features}, dataset_labels,
             {"num_data_point": num_data_points, "num_batches": num_batches}]

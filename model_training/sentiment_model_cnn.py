@@ -34,7 +34,7 @@ def keras_model_fn(_, config):
     cnn_model.add(GlobalMaxPool1D())
     cnn_model.add(Dense(units=100, activation = 'relu'))
     cnn_model.add(Dense(units=1, activation = 'sigmoid'))
-    Adam = keras.optimizers.Adam(lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=None, decay=0.0, amsgrad=False)
+    Adam = keras.optimizers.Adam(lr=0.0005, beta_1=0.9, beta_2=0.999, epsilon=None, decay=0.0, amsgrad=False)
     cnn_model.compile(loss = 'binary_crossentropy', optimizer = 'Adam', metrics =['accuracy'])
 
     return cnn_model
